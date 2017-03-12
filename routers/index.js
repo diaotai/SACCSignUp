@@ -49,14 +49,7 @@ function handdleRegister(url, request, response) {
                     let registerResult = register.process(username, password, email, phone);
                     if (register === 'success') {
                         response.writeHead(200);
-                        response.end(`
-                        {
-                            username: ${username},
-                            password: ${password},
-                            email: ${email},
-                            phone number: ${phone}
-                        }
-                        `);
+                        response.end('Registered successfully!');
                     } else {
                         handleHttp500(response, registerResult);
                     }

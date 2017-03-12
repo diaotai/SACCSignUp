@@ -19,7 +19,7 @@ function processRegister(username, password, email, phone) {
     if (!email.match(/\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/)) {
         return 'Email invalid.';
     }
-    if (!phone.match(/0?(13|14|15|18)[0-9]{9}/)) {
+    if (!phone.match(/0?(13|14|15|18|17)[0-9]{9}/)) {
         return 'Phone number invalid.'
     }
     
